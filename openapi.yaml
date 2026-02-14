@@ -1,0 +1,79 @@
+openapi: 3.0.4
+info:
+  title: Phishing Domain Checker
+  description: >-
+    Phishing Domain Checker verifies whether a domain or URL appears in a
+    comprehensive database of known phishing sites. Updated every 6 hours with
+    850,000+ active phishing domains.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/phishingcheck:
+    post:
+      summary: Check Domain for Phishing
+      description: Checks whether a domain is in the active phishing database
+      operationId: phishingcheck
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  domain: secure-banking-login.suspicious-domain.com
+                  isPhishing: true
+                  matchedDomain: suspicious-domain.com
+                  inputType: url
+                  originalInput: https://secure-banking-login.suspicious-domain.com/auth
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                domain:
+                  type: string
+                  description: The domain to check (e.g., example.com)
+              required:
+                - domain
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
+sampleRequest:
+  url: https://secure-banking-login.suspicious-domain.com/auth
