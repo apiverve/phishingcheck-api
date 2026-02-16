@@ -220,8 +220,9 @@ from apiverve_phishingdomainchecker.apiClient import PhishingcheckAPIClient
 
 api = PhishingcheckAPIClient("[YOUR_API_KEY]")
 
+query = { "url": "https://secure-banking-login.suspicious-domain.com/auth" }
+
 try:
-    query = { "url": "https://secure-banking-login.suspicious-domain.com/auth" }
     result = api.execute(query)
     print(result)
 finally:
