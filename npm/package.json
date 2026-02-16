@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/phishingcheck",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Phishing Domain Checker verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours with 850,000+ active phishing domains.",
   "main": "index.js",
   "types": "index.d.ts",
