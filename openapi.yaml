@@ -49,6 +49,10 @@ paths:
                   matchedDomain: suspicious-domain.com
                   inputType: url
                   originalInput: https://secure-banking-login.suspicious-domain.com/auth
+                  isPunycode: false
+                  isIpAddress: false
+                  riskScore: 85
+                  riskLevel: high
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
