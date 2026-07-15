@@ -126,7 +126,11 @@ async function makeRequest() {
     "isPhishing": true,
     "matchedDomain": "suspicious-domain.com",
     "inputType": "url",
-    "originalInput": "https://secure-banking-login.suspicious-domain.com/auth"
+    "originalInput": "https://secure-banking-login.suspicious-domain.com/auth",
+    "isPunycode": false,
+    "isIpAddress": false,
+    "riskScore": 85,
+    "riskLevel": "high"
   }
 }
 ```
