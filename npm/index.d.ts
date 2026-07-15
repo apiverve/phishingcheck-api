@@ -4,20 +4,36 @@ declare module '@apiverve/phishingcheck' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface phishingcheckResponse {
     status: string;
     error: string | null;
     data: PhishingDomainCheckerData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface PhishingDomainCheckerData {
-      domain:        string;
-      isPhishing:    boolean;
-      matchedDomain: string;
-      inputType:     string;
-      originalInput: string;
+      domain:        null | string;
+      isPhishing:    boolean | null;
+      matchedDomain: null | string;
+      inputType:     null | string;
+      originalInput: null | string;
+      isPunycode:    boolean | null;
+      isIPAddress:   boolean | null;
+      riskScore:     number | null;
+      riskLevel:     null | string;
   }
 
   export default class phishingcheckWrapper {
