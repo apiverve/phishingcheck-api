@@ -25,6 +25,9 @@ namespace APIVerve.API.PhishingDomainChecker
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.PhishingDomainChecker
         public string Domain { get; set; }
 
         [JsonProperty("isPhishing")]
-        public bool IsPhishing { get; set; }
+        public bool? IsPhishing { get; set; }
 
         [JsonProperty("matchedDomain")]
         public string MatchedDomain { get; set; }
@@ -43,5 +46,29 @@ namespace APIVerve.API.PhishingDomainChecker
 
         [JsonProperty("originalInput")]
         public Uri OriginalInput { get; set; }
+
+        [JsonProperty("isPunycode")]
+        public bool? IsPunycode { get; set; }
+
+        [JsonProperty("isIpAddress")]
+        public bool? IsIpAddress { get; set; }
+
+        [JsonProperty("riskScore")]
+        public long? RiskScore { get; set; }
+
+        [JsonProperty("riskLevel")]
+        public string RiskLevel { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
