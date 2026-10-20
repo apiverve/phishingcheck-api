@@ -15,7 +15,7 @@ async function callPhishingDomainCheckerAPI() {
   try {
     // Request body
     const requestBody &#x3D; {
-    &quot;url&quot;: &quot;https://secure-banking-login.suspicious-domain.com/auth&quot;
+    &quot;domain&quot;: &quot;centruldepiele.ro&quot;
 };
 
     const response = await fetch(API_URL, {

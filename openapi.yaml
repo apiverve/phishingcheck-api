@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Phishing Domain Checker
   description: >-
-    Phishing Domain Checker verifies whether a domain or URL appears in a
-    comprehensive database of known phishing sites. Updated every 6 hours with
-    850,000+ active phishing domains.
+    Phishing Domain Checker is a phishing detection API that verifies whether a
+    domain or URL appears in a comprehensive database of known phishing sites.
+    Updated every 6 hours from two independent blocklists covering 570,000+
+    phishing domains.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/phishingcheck:
     post:
-      summary: Check Domain for Phishing
+      summary: Phishing Domain Checker
       description: Checks whether a domain is in the active phishing database
       operationId: phishingcheck
       parameters: []
@@ -53,6 +54,9 @@ paths:
                   isIpAddress: false
                   riskScore: 85
                   riskLevel: high
+                  sources:
+                    - phishing-database
+                    - blocklistproject
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
@@ -80,4 +84,4 @@ components:
 security:
   - api_key: []
 sampleRequest:
-  url: https://secure-banking-login.suspicious-domain.com/auth
+  domain: centruldepiele.ro

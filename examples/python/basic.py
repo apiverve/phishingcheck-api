@@ -19,7 +19,7 @@ def call_phishingcheck_api():
     try:
         # Request body
         request_body &#x3D; {
-    &#x27;url&#x27;: &#x27;https://secure-banking-login.suspicious-domain.com/auth&#x27;
+    &#x27;domain&#x27;: &#x27;centruldepiele.ro&#x27;
 }
 
         headers = {

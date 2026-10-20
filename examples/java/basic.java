@@ -14,7 +14,7 @@ public class BasicExample {
         try {
             // Request body
             Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;url&quot;, &quot;https://secure-banking-login.suspicious-domain.com/auth&quot;);
+        parameters.put(&quot;domain&quot;, &quot;centruldepiele.ro&quot;);
 
             // Execute the API request
             APIResponse response = client.execute(parameters);

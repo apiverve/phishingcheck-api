@@ -1,13 +1,13 @@
-# [Phishing Domain Checker API](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Phishing Domain Checker API](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Phishing Domain Checker verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours with 850,000+ active phishing domains.
+Phishing Domain Checker is a phishing detection API that verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours from two independent blocklists covering 570,000+ phishing domains.
 
 The Phishing Domain Checker API provides a simple, reliable way to integrate phishing domain checker functionality into your applications. Built for developers who need production-ready phishing domain checker capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -31,7 +31,7 @@ The Phishing Domain Checker API provides a simple, reliable way to integrate phi
 async function callPhishingDomainCheckerAPI() {
     try {
         const requestBody = {
-    "url": "https://secure-banking-login.suspicious-domain.com/auth"
+    "domain": "centruldepiele.ro"
 };
 
         const response = await fetch('https://api.apiverve.com/v1/phishingcheck', {
@@ -60,7 +60,7 @@ curl -X POST "https://api.apiverve.com/v1/phishingcheck" \
   -H "x-api-key: YOUR_API_KEY_HERE" \
   -H "Content-Type: application/json" \
   -d '{
-    "url": "https://secure-banking-login.suspicious-domain.com/auth"
+    "domain": "centruldepiele.ro"
 }'
 ```
 
@@ -167,7 +167,7 @@ go get github.com/apiverve/phishingcheck-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Phishing Domain Checker API](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Phishing Domain Checker API](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/phishingcheck](https://docs.apiverve.com/ref/phishingcheck)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -197,11 +197,40 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Phishing Domain Checker API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "domain": "secure-banking-login.suspicious-domain.com",
+    "isPhishing": true,
+    "matchedDomain": "suspicious-domain.com",
+    "inputType": "url",
+    "originalInput": "https://secure-banking-login.suspicious-domain.com/auth",
+    "isPunycode": false,
+    "isIpAddress": false,
+    "riskScore": 85,
+    "riskLevel": "high",
+    "sources": [
+      "phishing-database",
+      "blocklistproject"
+    ]
+  }
 }
 ```
 
@@ -209,7 +238,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Phishing Domain Checker API](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Phishing Domain Checker API](https://apiverve.com/marketplace/phishingcheck?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

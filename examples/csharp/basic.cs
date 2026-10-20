@@ -30,7 +30,7 @@ namespace APIVerve.Examples
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
                 // Request body
-                var requestBody &#x3D; new { url &#x3D; &quot;https://secure-banking-login.suspicious-domain.com/auth&quot; };
+                var requestBody &#x3D; new { domain &#x3D; &quot;centruldepiele.ro&quot; };
 
                 var jsonContent = JsonSerializer.Serialize(requestBody);
                 var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
