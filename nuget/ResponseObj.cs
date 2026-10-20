@@ -58,6 +58,9 @@ namespace APIVerve.API.PhishingDomainChecker
 
         [JsonProperty("riskLevel")]
         public string RiskLevel { get; set; }
+
+        [JsonProperty("sources")]
+        public string[] Sources { get; set; }
     }
 
     public partial class Premium
