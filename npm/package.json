@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/phishingcheck",
-  "version": "1.2.0",
-  "description": "Phishing Domain Checker verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours with 850,000+ active phishing domains.",
+  "version": "1.2.2",
+  "description": "Phishing Domain Checker is a phishing detection API that verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours from two independent blocklists covering 570,000+ phishing domains.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "phishing check", "phishing detector", "phishing domain", "phishing url", "phishing api"
+    "phishing detection api", "phishing domain check api", "phishing api", "phishing url checker", "phishing check"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/phishingcheck-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/phishingcheck?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/phishingcheck?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

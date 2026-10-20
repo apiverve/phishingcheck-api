@@ -34,6 +34,7 @@ declare module '@apiverve/phishingcheck' {
       isIPAddress:   boolean | null;
       riskScore:     number | null;
       riskLevel:     null | string;
+      sources:       (null | string)[];
   }
 
   export default class phishingcheckWrapper {

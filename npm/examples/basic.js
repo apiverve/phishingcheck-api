@@ -15,7 +15,7 @@ const api = new phishingcheckAPI({
 
 // Example query
 var query = {
-  "url": "https://secure-banking-login.suspicious-domain.com/auth"
+  "domain": "centruldepiele.ro"
 };
 
 // Make the API request using callback
