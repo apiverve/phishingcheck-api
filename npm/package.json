@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/phishingcheck",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Phishing Domain Checker is a phishing detection API that verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours from two independent blocklists covering 570,000+ phishing domains.",
   "main": "index.js",
   "types": "index.d.ts",
