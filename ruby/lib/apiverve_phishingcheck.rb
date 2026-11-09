@@ -4,6 +4,6 @@ require_relative "apiverve_phishingcheck/client"
 
 module APIVerve
   module Phishingcheck
-    VERSION = "1.2.4"
+    VERSION = "1.2.5"
   end
 end
