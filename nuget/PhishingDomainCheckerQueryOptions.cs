@@ -11,7 +11,7 @@ namespace APIVerve.API.PhishingDomainChecker
     public class PhishingDomainCheckerQueryOptions
     {
         /// <summary>
-        /// The domain to check (e.g., example.com)
+        /// The domain to check (e.g., example.com). To check a raw IP host, send it through the url endpoint (e.g., http://1.2.3.4/)
         /// </summary>
         [JsonProperty("domain")]
         public string Domain { get; set; }
