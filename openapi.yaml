@@ -72,7 +72,10 @@ paths:
               properties:
                 domain:
                   type: string
-                  description: The domain to check (e.g., example.com)
+                  description: >-
+                    The domain to check (e.g., example.com). To check a raw IP
+                    host, send it through the url endpoint (e.g.,
+                    http://1.2.3.4/)
               required:
                 - domain
 components:
