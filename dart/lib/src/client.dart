@@ -49,7 +49,7 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/phishingcheck?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [domain] (required) - The domain to check (e.g., example.com) [format: domain]
+/// * [domain] (required) - The domain to check (e.g., example.com). To check a raw IP host, send it through the url endpoint (e.g., http://1.2.3.4/) [format: domain]
 class PhishingcheckClient {
   final String apiKey;
   final String baseUrl;

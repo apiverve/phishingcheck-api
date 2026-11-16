@@ -1,6 +1,6 @@
 name: apiverve_phishingcheck
 description: "Phishing Domain Checker is a phishing detection API that verifies whether a domain or URL appears in a comprehensive database of known phishing sites. Updated every 6 hours from two independent blocklists covering 570,000+ phishing domains."
-version: 1.2.5
+version: 1.2.6
 homepage: https://apiverve.com/marketplace/phishingcheck?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/phishingcheck-api/tree/main/dart
 
